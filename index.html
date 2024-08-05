@@ -189,13 +189,6 @@ the images as variables */
   background-color: rgba(32,32,46,.7);
   padding: 10px;
   color: #dedace;
-  
-  
-    
-  
-  
-  
-  
                 width: 100%;
                 background-color: rgba(32,32,46,.7);
                 /* header color here! */
@@ -344,8 +337,24 @@ the images as variables */
     "max-width" value below
     */
 
-            @media only screen and (max-width: 900px) {
-                #flex {
+            @media handheld, only screen and (max-width: 767px) {
+              #header {
+                border:3px solid;
+  height:180px;
+  flex: auto;
+  position:relative;
+  margin-top: 10px;
+  margin-bottom: 15px; 
+  padding: 10px;
+  color: #dedace;
+  width: 100%;
+  background-color: rgba(32,32,46,.7);
+  background-image: url('https://zenmod3r.neocities.org/images/layouts/megumi.jpg');
+  box-shadow: inset 0 0 0 1000px rgba(32,32,46,.75);
+  background-size: 100%
+              }
+               
+    #flex {
                     flex-wrap: wrap;
                 }
 
