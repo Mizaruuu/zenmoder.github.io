@@ -91,7 +91,7 @@ the images as variables */
 
 :root {
     --header-image: url('https://zenmod3r.neocities.org/images/layouts/megumi.jpg');
-    --body-bg-image: url('https://twinstars01.s-ul.eu/aGl7o6Tw');
+    --body-bg-image: url('https://twinstars01.s-ul.eu/wNkVgdDm');
 
     /* colors */
     --content: #dedace;
@@ -135,11 +135,12 @@ the images as variables */
             body {
                 font-family: 'Nunito', sans-serif;
                 margin: 0;
-                background-color: #dedace;
+                background-color: rgba(32,32,32,0.8);
                 /* you can delete the line below if you'd prefer to not use an image */
                 background-size: 1920px;
                 color: #dedace;
                 background-image: var(--body-bg-image);
+                background-blend-mode: overlay;
             }
 
             * {
