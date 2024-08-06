@@ -31,15 +31,15 @@ so anything i feel should be listed on here will be.</p>
 
 <div id="flex">
     <aside id="leftSidebar" style="margin-right: 10px;">
-        <h2>Updates</h2>
+        <h2>updates</h2>
         <div class="box">
             <p>site under construction</p>
             <ul style="padding-left:10px;">
-                <li>gotta rework layout</li>
-                <li>redo skins github or host another way</li>
+                <li><s>gotta rework layout</s> did it (kinda)</li>
+                <li><s>redo skins github or host another way</s> skins page is complete!</li>
             </ul>
         </div>
-        <h2>Meh</h2>
+       <h2>other</h2>
         <h3>temp links</h3>
         <ul>
             <li><a href="https://osu.ppy.sh/users/9500728" target="_blank">osu! profile</a>
@@ -200,7 +200,6 @@ the images as variables */
                 background-size: 1920px;
                 color: #dedace;
                 background-image: var(--body-bg-image);
-                overflow: auto;
             }
 
             * {
@@ -224,7 +223,7 @@ the images as variables */
                 /* if you change the above value, scroll to the bottom
       and change the media query according to the comment! */
                 margin: 0 auto; 
-                margin-top: 50px;
+                margin-top: 20px;
                 /* this centers the entire page */
             }
 
@@ -240,37 +239,32 @@ the images as variables */
 
             #header { 
   border:3px solid;
+  display: block;
   height:180px;
+  flex: auto;
   position:relative;
   margin-top: 10px;
-  margin-bottom: 15px; 
+  margin-bottom: 10px; 
   background-color: rgba(32,32,46,.7);
   padding: 10px;
   color: #dedace;
-  
-  
-    
-  
-  
-  
-  
                 width: 100%;
                 background-color: rgba(32,32,46,.7);
                 /* header color here! */
-                height: 250px;
+                height: 260px;
                 /* this is only for a background image! */
                 /* if you want to put images IN the header, 
       you can add them directly to the <div id="header"></div> element! */
                 background-image: url('https://zenmod3r.neocities.org/images/layouts/megumi.jpg');
-                box-shadow: inset 0 0 0 1000px rgba(32,32,46,.75);
+                box-shadow: inset 0 0 0 1000px rgba(32,32,46,.90);
                 background-size: 100%
             }
 
             /* navigation section!! */
-            *#navbar { 
+            #navbar { 
                 height: 40px;
                 background-color: #20202e;
-                border: 3px solid #dedace;
+              border: 3px solid #dedace;
                 /* navbar color */
                 width: 100%;
             }
@@ -301,22 +295,22 @@ the images as variables */
                 color: #a49cba;
                 text-decoration: underline;
             }
-
-              #flex {
-                display: flex;
-            }
-              .skinbox {
+             .skinbox {
               height: 440px;
               overflow-x: hidden;
               overflow-y: scroll;
             }
+              #flex {
+                display: flex;
+            }
+
             /* this colors BOTH sidebars
     if you want to style them separately,
     create styles for #leftSidebar and #rightSidebar */
             aside {
                 background-color: #20202e;
-                opacity: 0.5;
-                border: 3px solid #ffffff;
+                /*opacity: 0.5;*/
+                border: 3px solid #dedace;
                 width: 200px;
                 padding: 20px;
                 font-size: smaller;
@@ -332,9 +326,9 @@ the images as variables */
                 flex: 1;
                 padding: 20px;
                 order: 2;
-                
             }
 
+            
             /* what's this "order" stuff about??
     allow me to explain!
     if you're using both sidebars, the "order" value
@@ -350,14 +344,14 @@ the images as variables */
             }
 
             footer {
-                border: 3px solid #dedace;
+               border: 3px solid #dedace;
                 box-shadow: inset 0 0 0 1000px rgba(32,32,46,.75);
                 background-image: url('https://zenmod3r.neocities.org/images/layouts/miku2.jpg');
-                background-color: rgba(32,32,46,0.3);
-                /* background color for footer */
                 width: 100%;
                 height: 30px;
                 padding: 0;
+                background-color: rgba(32,32,46,0.3);
+                /* background color for footer */
                 text-align: center;
                 /* this centers the footer text */
             }
@@ -365,7 +359,8 @@ the images as variables */
             h1,
             h2,
             h3 {
-                color: #ffffff;
+                color: #dedace;
+                flex: auto;
             }
 
             h1 {
@@ -376,12 +371,18 @@ the images as variables */
                 /* this styles bold text */
                 color: #8c8ebf;
             }
-
+            /*p {
+              padding: 10px;
+              flex: auto;
+              
+}*/
             /* this is just a cool box, it's the darker colored one */
             .box {
                 background-color: #2c2f42;
-                border: 3px solid #ffffff;
-                padding: 10px;
+                border: 2px solid #dedace;
+                padding: 9px;
+                box-shadow: inset 0 0 0 1000px rgba(32,32,46,.75);
+                background-image: url('https://zenmod3r.neocities.org/images/layouts/miku2.jpg');
             }
 
             /* CSS for extras */
@@ -401,7 +402,6 @@ the images as variables */
 
             /* BELOW THIS POINT IS MEDIA QUERY */
              
-
             /* so you wanna change the width of your page? 
     by default, the container width is 900px.
     in order to keep things responsive, take your new height,
@@ -409,13 +409,15 @@ the images as variables */
     "max-width" value below
     */
 
-            @media only screen and (max-width: 900px) {
-                #flex {
+            @media handheld, only screen and (max-width: 767px) {
+
+               
+    #flex {
                     flex-wrap: wrap;
                 }
 
                 aside {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 /* the order of the items is adjusted here for responsiveness!
