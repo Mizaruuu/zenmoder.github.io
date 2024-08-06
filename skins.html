@@ -23,27 +23,14 @@ so anything i feel should be listed on here will be.</p>
 <nav id="navbar" style="margin-bottom: 10px;"><ul>
     <li><a href="https://zenmoder.xyz/">home</a></li>
     <li><a href="https://zenmoder.xyz/skins">skins</a></li>
-    <li><a href="#">link</a></li>
-    <li><a href="#">link</a></li>
-    <li><a href="#">link</a></li>
-    <li><a href="#">link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
   </ul></nav></div>
 
-
-    <main>
-        <h1>skins</h1>
-        <p><strong>click on the name of the skin to download</strong></p>
-      
-        <p>skin</p>
-        <p>skin</p>
-        <p>skin</p>
-        <p>skin</p>
-        <p>skin</p>
-        
-      </main>         
-</div>
-    <div id="flex">
-   <aside id="leftSidebar" style="margin-right: 10px;">
+<div id="flex">
+    <aside id="leftSidebar" style="margin-right: 10px;">
         <h2>Updates</h2>
         <div class="box">
             <p>site under construction</p>
@@ -62,6 +49,18 @@ so anything i feel should be listed on here will be.</p>
             <li><a href="https://github.com/Mizaruuu/skins/blob/main/skins.md" target="_blank">osu! skins</a></li>
         </ul>
     </aside>
+    <main>
+        <h1>skins</h1>
+        <p><strong>click on the name of the skin to download</strong></p>
+      
+        <p>skin</p>
+        <p>skin</p>
+        <p>skin</p>
+        <p>skin</p>
+        <p>skin</p>
+        
+      </main>         
+</div>
 <footer id="footer" style="margin-top: 10px;">imma dig in my butt regardless</footer>
 </div>
 <!-- THIS IS THE CSS !-->
@@ -262,24 +261,23 @@ the images as variables */
     tells the CSS the order in which to display them.
     left sidebar is 1, content is 2, and right sidebar is 3! */
 
-           #leftSidebar {
-                order: 1; 
+            */ #leftSidebar {
+                order: 1;
             }
 
-            #rightSidebar { 
+            #rightSidebar {
                 order: 3;
             }
 
-           
-                footer {
+            footer {
                 border: 3px solid #dedace;
                 box-shadow: inset 0 0 0 1000px rgba(32,32,46,.75);
                 background-image: url('https://zenmod3r.neocities.org/images/layouts/miku2.jpg');
+                background-color: rgba(32,32,46,0.3);
+                /* background color for footer */
                 width: 100%;
                 height: 30px;
                 padding: 0;
-                background-color: rgba(32,32,46,0.3);
-                /* background color for footer */
                 text-align: center;
                 /* this centers the footer text */
             }
@@ -330,7 +328,6 @@ the images as variables */
     and then subtrack it by 100. use this new number as the 
     "max-width" value below
     */
-              
 
             @media only screen and (max-width: 900px) {
                 #flex {
@@ -338,7 +335,7 @@ the images as variables */
                 }
 
                 aside {
-                    width: 100%;
+                    width: 90%;
                 }
 
                 /* the order of the items is adjusted here for responsiveness!
